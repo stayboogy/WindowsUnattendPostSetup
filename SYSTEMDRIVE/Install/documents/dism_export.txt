@@ -1,0 +1,1 @@
+dism /export-image /sourceimagefile:C:\Users\Administrator\Desktop\install.wim /SourceIndex:1 /destinationimagefile:C:\Users\Administrator\Desktop\x64AdminUnattendInstall.wim /compress:max
