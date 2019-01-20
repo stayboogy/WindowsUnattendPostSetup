@@ -7,4 +7,4 @@ sub shell(cmd)
 end sub
 
 shell "C:\install\install.cmd"
-shell "powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\Install\wallpaper\wallpaper.ps1"
+shell "powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File C:\Install\wallpaper\wallpaper.ps1"
