@@ -39,16 +39,16 @@ reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BrokerInfrastructu
 sc config BFE start= auto
 
 :: BitLocker Drive Encryption Service / Default - Manual
-sc config BDESVC start= disabled
+sc config BDESVC start= demand
 
 :: Block Level Backup Engine Service / Default - Manual
 sc config wbengine start= demand
 
 :: Bluetooth Handsfree Service / Default - Manual
-sc config BthHFSrv start= disabled
+sc config BthHFSrv start= demand
 
 :: Bluetooth Support Service / Default - Manual
-sc config bthserv start= disabled
+sc config bthserv start= demand
 
 :: BranchCache / Default - Manual
 sc config PeerDistSvc start= disabled
@@ -97,6 +97,9 @@ sc config DsSvc start= demand
 
 :: DataCollectionPublishingService / Default - Manual
 sc config DcpSvc start= demand
+
+:: DataUsage Service / Default - Automatic
+sc config DusmSvc start= disabled
 
 :: DCOM Server Process Launcher / Default - Automatic
 :: reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DcomLaunch" /v "Start" /t REG_DWORD /d "2" /f
@@ -150,7 +153,7 @@ sc config MapsBroker start= disabled
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\embeddedmode" /v "Start" /t REG_DWORD /d "3" /f
 
 :: Encrypting File System (EFS) / Default - Manual
-sc config EFS start= disabled
+sc config EFS start= demand
 
 :: Enterprise App Management Service / Default - Manual
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EntAppSvc" /v "Start" /t REG_DWORD /d "3" /f
@@ -172,9 +175,6 @@ sc config FDResPub start= disabled
 
 :: Geolocation Service / Default - Manual
 sc config lfsvc start= disabled
-
-:: Group Policy Client / Default - Automatic
-:: reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\gpsvc" /v "Start" /t REG_DWORD /d "2" /f
 
 :: HomeGroup Listener / Default - Manual
 sc config HomeGroupListener start= disabled
@@ -536,15 +536,6 @@ sc config wcncsvc start= disabled
 :: Windows Connection Manager / Default - Automatic
 sc config Wcmsvc start= disabled
 
-:: Windows Defender Advanced Threat Protection Service / Default - Manual
-reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Sense" /v "Start" /t REG_DWORD /d "4" /f
-
-:: Windows Defender Antivirus Network Inspection Service / Default - Manual / ???
-reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdNisSvc" /v "Start" /t REG_DWORD /d "4" /f
-
-:: Windows Defender Service / Default - Automatic / ???
-reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinDefend" /v "Start" /t REG_DWORD /d "4" /f
-
 :: Windows Driver Foundation - User-mode Driver Framework / Default - Manual
 sc config wudfsvc start= demand
 
@@ -603,7 +594,7 @@ sc config WinRM start= disabled
 sc config WSearch start= disabled
 
 :: Windows Time / Default - Manual
-sc config W32Time start= disabled
+sc config W32Time start= auto
 
 :: Windows Update / Default - Manual
 sc config wuauserv start= disabled
