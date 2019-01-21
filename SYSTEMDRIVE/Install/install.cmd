@@ -12,6 +12,10 @@ reg import %SYSTEMDRIVE%\Tools\UltraISO\registration.reg
 reg import %SYSTEMDRIVE%\Install\registry\RemoveLibrariesThisPC.reg
 reg import %SYSTEMDRIVE%\Install\registry\TakeOwnership.reg
 start %SYSTEMDRIVE%\Install\registry\services.bat
+reg import %SYSTEMDRIVE%\Install\registry\DomainFirewall.reg
+reg import %SYSTEMDRIVE%\Install\registry\FirewallRules.reg
+reg import %SYSTEMDRIVE%\Install\registry\PublicFirewall.reg
+reg import %SYSTEMDRIVE%\Install\registry\StandardFirewall.reg
 DISM /Online /Enable-Feature /FeatureName:NetFx3 /All /LimitAccess /Source:C:\install\dism
 powercfg.exe /hibernate off
 powercfg -duplicatescheme a1841308-3541-4fab-bc81-f71556f20b4a
