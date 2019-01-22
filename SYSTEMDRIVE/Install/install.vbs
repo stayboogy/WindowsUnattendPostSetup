@@ -8,5 +8,6 @@ end sub
 
 shell "C:\install\install.cmd"
 shell "powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File C:\Install\wallpaper\wallpaper.ps1"
+shell "powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File C:\Install\wallpaper\lockscreen.ps1"
 shell "powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File C:\Install\registry\calculator.ps1"
 
