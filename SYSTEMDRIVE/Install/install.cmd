@@ -11,7 +11,6 @@ reg import %SYSTEMDRIVE%\Install\registry\NoUpdatesEver.reg
 reg import %SYSTEMDRIVE%\Tools\UltraISO\registration.reg
 reg import %SYSTEMDRIVE%\Install\registry\RemoveLibrariesThisPC.reg
 reg import %SYSTEMDRIVE%\Install\registry\TakeOwnership.reg
-start %SYSTEMDRIVE%\Install\registry\services.bat
 reg import %SYSTEMDRIVE%\Install\registry\DomainFirewall.reg
 reg import %SYSTEMDRIVE%\Install\registry\FirewallRules.reg
 reg import %SYSTEMDRIVE%\Install\registry\PublicFirewall.reg
