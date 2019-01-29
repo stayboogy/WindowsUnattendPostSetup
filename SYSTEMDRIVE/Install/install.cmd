@@ -1,4 +1,5 @@
 timeout /t 7
+start %SYSTEMDRIVE%\Apps\apps.cmd
 reg import %SYSTEMDRIVE%\Install\registry\ActivatePhotoViewer.reg
 reg import %SYSTEMDRIVE%\Install\registry\calc.reg
 reg import %SYSTEMDRIVE%\Install\registry\CloudshareFix.reg
