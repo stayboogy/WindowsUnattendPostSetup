@@ -1,5 +1,6 @@
 start %SYSTEMDRIVE%\Install\Apps\apps.cmd
-timeout /t 30
+timeout /t 90
+reg import %SYSTEMDRIVE%\Install\registry\StartLayout.reg
 reg import %SYSTEMDRIVE%\Install\Sync\PSyncEnable.reg
 reg import %SYSTEMDRIVE%\Install\Sync\TSyncEnable.reg
 reg import %SYSTEMDRIVE%\Install\registry\ActivatePhotoViewer.reg
