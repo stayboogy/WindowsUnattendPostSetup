@@ -1,3 +1,0 @@
-dism /export-image /sourceimagefile:install.swm /swmfile:install*.swm /sourceindex:1 /destinationimagefile:install.wim /Compress:max /CheckIntegrity
-
-dism /export-image /sourceimagefile:preinst.swm /swmfile:preinst*.swm /sourceindex:1 /destinationimagefile:preinst.wim /compress:max /checkintegrity

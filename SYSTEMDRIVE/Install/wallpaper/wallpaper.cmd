@@ -1,1 +1,0 @@
-powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File C:\Install\wallpaper\wallpaper.ps1
